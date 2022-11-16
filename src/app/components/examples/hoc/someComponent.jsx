@@ -10,3 +10,6 @@ SomeComponent.propTypes = {
     name: PropTypes.string
 };
 export default SomeComponent;
+
+// SomeComponent - компонент, который мы используем для примеров работы с HOC
+// Это компонент, на основе которого мы делаем измененные компоненты и используем их

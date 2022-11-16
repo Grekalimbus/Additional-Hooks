@@ -20,6 +20,8 @@ module.exports = {
             { anonymous: "always", named: "never" }
         ],
         "multiline-ternary": ["off"],
+        "react/display-name": "off",
+        "no-tabs": "off",
         quotes: [
             "error",
             "double",
