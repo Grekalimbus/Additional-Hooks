@@ -1,5 +1,16 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
+
+const WrapperChildren = ({ children }) => {
+    // console.log(children);
+    return React.Children.map(children, (child, index) => {
+        const config = {
+            ...child.props,
+            _id: index + 1
+        };
+        return React.cloneElement(child, config);
+    });
+};
 const ChildrenExercise = () => {
     return (
         <CollapseWrapper title="Упражнение">
@@ -10,16 +21,17 @@ const ChildrenExercise = () => {
                 <code>React.Children.map</code> так и{" "}
                 <code>React.Children.toArray</code>
             </p>
-
-            <Component />
-            <Component />
-            <Component />
+            <WrapperChildren>
+                <Component />
+                <Component />
+                <Component />
+            </WrapperChildren>
         </CollapseWrapper>
     );
 };
 
 const Component = () => {
-    return <div>Компонент списка</div>;
+    return <div>Компонент списка </div>;
 };
 
 export default ChildrenExercise;
