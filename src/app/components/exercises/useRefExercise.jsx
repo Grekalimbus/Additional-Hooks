@@ -5,8 +5,8 @@ const UseRefExercise = () => {
     const divRef = useRef();
     const textRef = useRef();
     const handleClick = () => {
-        divRef.current.style.width = "150px";
-        divRef.current.style.heigth = "80px";
+        divRef.current.style.width = "80px";
+        divRef.current.style.height = "150px";
         textRef.current.innerText = "Текст";
     };
 
